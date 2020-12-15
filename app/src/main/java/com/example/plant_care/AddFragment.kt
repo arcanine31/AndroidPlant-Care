@@ -74,6 +74,7 @@ class AddFragment : Fragment() {
                     Toast.makeText(activity, "Tambah data gagal", Toast.LENGTH_SHORT).show()
                 }else{
                     Toast.makeText(activity, "Tambah data berhasil", Toast.LENGTH_SHORT).show()
+
                 }
             }
 
