@@ -5,11 +5,9 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.plant_care.DetailPlant
 import com.example.plant_care.EditPlant
 import com.example.plant_care.R
 import com.example.plant_care.model.Plant
@@ -49,7 +47,7 @@ class PlantAdapter (val context: Context): RecyclerView.Adapter<PlantAdapter.Pla
             txtMenit.text = m.menit
 
             cardViewPlant.setOnClickListener{
-                var i = Intent(context, DetailPlant::class.java)
+                var i = Intent(context, EditPlant::class.java)
                 i.putExtra("status", false)
                 i.putExtra("data", m)
                 context.startActivity(i)

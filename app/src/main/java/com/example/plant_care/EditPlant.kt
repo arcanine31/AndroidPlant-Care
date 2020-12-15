@@ -11,7 +11,6 @@ import android.widget.Toast
 import com.example.plant_care.database.DbContract
 import com.example.plant_care.database.ReaderDbHelper
 import com.example.plant_care.model.Plant
-import kotlinx.android.synthetic.main.activity_detail_plant.*
 import kotlinx.android.synthetic.main.activity_edit_plant.*
 import kotlinx.android.synthetic.main.activity_edit_plant.et_jam
 import kotlinx.android.synthetic.main.activity_edit_plant.et_menit
@@ -44,12 +43,7 @@ class EditPlant : AppCompatActivity() {
         et_need.setText(plant.need)
         et_jam.setText(plant.time)
         et_menit.setText(plant.menit)
-//        p = intent.extras
-//
-//        et_name.setText(p?.getString("name"))
-//        et_need.setText(p?.getString("need"))
-//        et_jam.setText(p?.getString("time"))
-//        et_menit.setText(p?.getString("menit"))
+
     }
 
     fun initListener(){
@@ -100,6 +94,20 @@ class EditPlant : AppCompatActivity() {
                     finish()
                 }
             }
+        }
+
+        bt_hapus.setOnClickListener{
+            val selection = "${BaseColumns._ID} LIKE ?"
+            val selectionArg = arrayOf(plant.id.toString())
+
+            val deleteRow = db.delete(DbContract.DataEntry.TABLE_NAME, selection, selectionArg)
+            if (deleteRow == -1){
+                Toast.makeText(this, "Hapus data gagal", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, "Hapus data berhasil", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+
         }
     }
 }

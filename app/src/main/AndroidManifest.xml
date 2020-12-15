@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlantCare">
         <activity android:name=".EditPlant"></activity>
-        <activity android:name=".DetailPlant" />
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
