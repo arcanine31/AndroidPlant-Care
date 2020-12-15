@@ -6,20 +6,26 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_plant"
+        app:cardBackgroundColor="#dce8ec"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="8dp"
         app:cardCornerRadius="10dp">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/linearLayout5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/tv_item_time"
@@ -27,14 +33,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="12"
-                    android:textSize="15sp"/>
+                    android:textSize="30dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text=" : "
-                    android:textSize="15sp"/>
+                    android:textSize="30dp"/>
 
                 <TextView
                     android:id="@+id/tv_item_menit"
@@ -42,33 +48,45 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="12"
-                    android:textSize="15sp"/>
+                    android:textSize="30dp"/>
             </LinearLayout>
 
 
             <TextView
                 android:id="@+id/tv_item_name"
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="10dp"
                 android:layout_weight="1"
                 android:text="Gekka Bijin"
-                android:textColor="#000"
+                android:textColor="@color/colorPrimary"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_item_need"
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="8dp"
                 android:layout_weight="1"
                 android:text="PERAWATAN"
-                android:textSize="18sp" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
+                app:layout_constraintVertical_bias="0.0" />
 
 
 
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
 

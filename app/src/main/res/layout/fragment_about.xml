@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Plant-Care"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_marginBottom="20dp"
@@ -36,6 +36,7 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
             android:text="Dibuat untuk memenuhi tugas PSI"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
