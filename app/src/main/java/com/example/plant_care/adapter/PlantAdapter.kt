@@ -34,6 +34,7 @@ class PlantAdapter (val context: Context): RecyclerView.Adapter<PlantAdapter.Pla
 
     inner class PlantViewHolder(item: View): RecyclerView.ViewHolder(item){
 
+
         val txtName: TextView = item.findViewById(R.id.tv_item_name)
         val txtNeed: TextView = item.findViewById(R.id.tv_item_need)
         val txtTime: TextView = item.findViewById(R.id.tv_item_time)

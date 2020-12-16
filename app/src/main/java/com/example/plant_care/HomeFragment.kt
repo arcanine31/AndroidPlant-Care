@@ -70,12 +70,6 @@ class HomeFragment : Fragment() {
                 addPlant.add(Plant(id, name, need, jam, menit))
             }
         }
-
-//        addPlantList.add(Plant("NANAN", "Nananana", "19999"))
-//        addPlantList.add(Plant("NANAN", "Nananana", "19999"))
-//        addPlantList.add(Plant("NANAN", "Nananana", "19999"))
-//        addPlantList.add(Plant("NANAN", "Nananana", "19999"))
-//        addPlantList.add(Plant("NANAN", "Nananana", "19999"))
         rcview_item.layoutManager = lm
         plantAdapter = PlantAdapter(activity!!)
         rcview_item.adapter = plantAdapter

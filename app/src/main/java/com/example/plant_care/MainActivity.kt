@@ -85,6 +85,7 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
 //    NOTIF TESTER
 
 //    fun sendNotification(PlantName: String, PlantNeed: String){
